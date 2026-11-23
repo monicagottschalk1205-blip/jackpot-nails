@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mia's Jackpot Nails</title>
+<meta name="description" content="Custom nail sets in Kansas City, MO. Can't pick a design? Spin for it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=51">
+</head>
+<body>
+<canvas id="coins" aria-hidden="true"></canvas>
+
+<!-- shared gold gradients for the ornaments -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="starPink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd6e8"/><stop offset=".5" stop-color="#ff7fb3"/><stop offset="1" stop-color="#e83f86"/></linearGradient>
+    <linearGradient id="starWhite" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffe3ef"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff6c2"/><stop offset=".3" stop-color="#f0c45a"/><stop offset=".55" stop-color="#a8721a"/><stop offset=".78" stop-color="#f5d684"/><stop offset="1" stop-color="#8a5a0e"/>
+    </linearGradient>
+    <g id="scrollPaths" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M102 46C90 20 62 14 48 28C36 40 48 58 64 52C76 47 72 32 60 34"/>
+      <path d="M100 56C84 64 58 66 36 58C22 52 14 42 22 32"/>
+      <path d="M22 32C28 24 40 26 38 36C36 42 28 40 30 34"/>
+      <path d="M97 28C93 12 79 6 67 10"/>
+      <path d="M67 10C61 12 61 20 67 20"/>
+      <path d="M84 40C80 32 72 30 68 36"/>
+    </g>
+  </defs>
+</svg>
+
+<header class="nav">
+  <a class="logo" href="#top" data-studio="name">Mia's Jackpot Nails</a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#work">The work</a>
+    <a href="#about">About</a>
+  </nav>
+  <a class="btn btn-sm" href="#" data-book>Book</a>
+</header>
+
+<main class="stage" id="top">
+
+  <section class="copy">
+    <h1 class="split">Can't pick a design? <em>Spin</em> for it.</h1>
+    <p class="lede">Love a nail? Tap its finger to keep it, then pull again.</p>
+  </section>
+
+  <section class="machine-wrap" aria-label="Nail set spinner">
+    <div class="machine" id="machine">
+
+      <div class="cab-trim">
+        <div class="cab">
+          <div class="arch" id="arch" aria-hidden="true"></div>
+
+          <div class="face">
+            <div class="jewels" id="jewelsL" aria-hidden="true"></div>
+            <div class="center">
+              <div class="frame">
+                <i class="pointer" aria-hidden="true"></i>
+                <div class="window" id="window">
+                  <div class="reels" id="reels"></div>
+                  <div class="glass" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="fingers" id="fingers" role="group" aria-label="Hold a nail"></div>
+            </div>
+            <div class="jewels" id="jewelsR" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ledge">
+        <i class="lslot" aria-hidden="true"></i>
+        <button class="spin-btn" id="spinBtn" type="button" aria-label="Spin"><span>SPIN</span></button>
+        <i class="lslot" aria-hidden="true"></i>
+      </div>
+
+      <button class="lever" id="lever" type="button" aria-label="Pull the lever">
+        <span class="lever-arm"><span class="lever-ball"></span></span>
+        <span class="lever-hub"></span>
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== THE WORK ===== -->
+<section class="work" id="work">
+  <div class="sec-head reveal">
+    <span class="eyebrow">The work</span>
+    <h2>Every set, <em>hand painted.</em></h2>
+    <p>A few recent favorites. Any design can be done in your shape and length.</p>
+  </div>
+  <div class="sets" id="sets"></div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="about-photo reveal">
+    <div class="photo-frame">
+      <img src="images/about.jpg" alt="Mia, the nail artist, smiling at her table" loading="lazy">
+    </div>
+  </div>
+  <div class="about-copy reveal">
+    <h2>Hi, I'm <em data-studio="tech">Mia</em>.</h2>
+    <p>I've been painting nails for six years, and I still get excited every time someone sits down with a screenshot and a dream. I specialize in almond sets, hand painted art and 3D details, and every set is made to last.</p>
+    <p>I'm based right here in Kansas City, MO, in a calm, cute and fully sanitized studio, so all you have to do is pick your vibe. Or let the machine pick it for you.</p>
+    <ul class="facts">
+      <li><b>6 yrs</b><span>painting nails</span></li>
+      <li><b>Licensed</b><span>and sanitized</span></li>
+      <li><b>By appt</b><span data-studio="city">Kansas City, MO</span></li>
+    </ul>
+    <div class="about-cta">
+      <a class="btn" href="#" data-book>Book your set</a>
+      <a class="link" href="#" data-ig><span data-studio="handle">@jackpotnails</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <span data-studio="name">Mia's Jackpot Nails</span>
+  <span><span data-studio="city">Kansas City, MO</span> &middot; by appointment</span>
+  <span>&copy; 2026</span>
+</footer>
+
+<script src="vendor/gsap.min.js?v=51"></script>
+<script src="app.js?v=51"></script>
+</body>
+</html>
